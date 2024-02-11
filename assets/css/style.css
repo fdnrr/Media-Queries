@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-areas: "nav" "buscador" "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px 80px 1fr 65px;
+  height: 100vh;
+
+}
+
+nav {
+  padding: 15px;
+  display: flex;
+  background-color: #229954;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: nav;
+  color: white;
+}
+
+.logo {
+
+  display: flex;
+  gap: 10px;
+}
+
+.navbar {
+  display: none;
+}
+
+.buscador {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #e2e2e2;
+  grid-area: buscador;
+  padding-top: 10px;
+  padding-bottom: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  gap: 5px;
+}
+
+#ordenar {
+  padding: 10px;
+  background-color: white;
+  border-style: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+main {
+  grid-area: main;
+
+}
+
+.principal {
+
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 10px;
+  border-style: solid;
+  border-color: #e2e2e2;
+  box-shadow: 2px 2px 2px #e2e2e2;
+  border-radius: 5px;
+
+}
+
+figure img {
+  width: 100%;
+
+}
+
+.card_body p {
+  text-align: center;
+  font-size: 17px;
+  padding-top: 15px;
+}
+
+.card_body {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  padding-top: 10px;
+  padding-right: 0px;
+  padding-bottom: 10px;
+  margin-left: 119px;
+  margin-right: 119px;
+  color: white;
+  font-weight: bold;
+  background-color: #27ae60;
+  border-style: none;
+  border-radius: 5px;
+}
+
+.siguiente-pagina ul {
+  justify-content: center;
+  display: flex;
+  list-style: none;
+  padding-bottom: 0;
+  color: #52be80;
+}
+
+.siguiente-pagina li {
+  padding: 7px;
+  border-style: solid;
+  border-color: #e2e2e2;
+  border-width: 0.3px;
+  border-radius: 2px;
+
+}
+
+.siguiente-pagina {
+  margin-bottom: 20px;
+  padding-bottom: 0;
+}
+
+footer {
+  grid-area: footer;
+  padding: 15px;
+  background-color: #196f3d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+footer p {
+  padding-bottom: 15px;
+
+}
+
+@media (min-width: 576px) {
+  body {
+    grid-template-areas:
+      "nav buscador"
+      "nav main"
+      "footer main";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 110px 1fr 120px;
+  }
+
+  .icono {
+    display: none;
+  }
+
+  .logo {
+    padding-left: 30px;
+  }
+
+  .navbar {
+    align-items: flex-start;
+    flex-grow: 1;
+    display: block;
+
+  }
+
+  .buscador {
+    height: 80px;
+  }
+
+  nav {
+    align-items: flex-start;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+
+
+  }
+
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25px;
+    gap: 15px;
+    list-style: none;
+    padding-left: 50px;
+
+  }
+
+  .principal {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: center;
+    max-height: calc(100vh - 225px);
+    gap: 5px 25px;
+    padding-top: 0;
+   margin-top: 0;
+   margin-left: 5px;
+   margin-right: 5px;
+   margin-bottom: 0;
+   
+   
+
+  }
+
+  .card {
+    width: 22%;
+    height: auto;
+    padding-bottom: 0;
+
+
+  }
+
+  button {
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 25px;
+    padding-top: 0;
+    padding: 10px;
+    margin-top: 5px;
+  }
+
+  .buscador {
+    padding-top: 5px;
+    padding-bottom: 0px;
+  }
+
+  .card p {
+    padding-top: 10px;
+  }
+  footer p{
+padding-top: 10px;
+text-align: center;
+margin-top: 15px;
+
+  }
+  .footer-icon{
+padding-top: 15px;
+  }
+  .siguiente-pagina ul{
+    margin-top: 40px;
+    
+  }
+  .siguiente-pagina{
+    margin-bottom: 0px;
+  }
+ 
+  }
